@@ -174,6 +174,11 @@ router.post('/verifyOTP',async (req,res)=>{
                     }
                 })
             }
+            else{
+                res.status(400).send({
+                    Message:'Incorrect OTP'
+                })
+            }
         }
     })
 })
