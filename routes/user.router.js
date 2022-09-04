@@ -10,15 +10,15 @@ const usrschema = require('../model/user.mongo')
 const bcrypt = require('bcrypt')
 const nodemailer = require('nodemailer')
 const transporter = nodemailer.createTransport({
-    host: "smtp.office365.com", // hostname
+    host: "smtp.gmail.com", // hostname
     secureConnection: false, // TLS requires secureConnection to be false
     port: 587, // port for secure SMTP
     tls: {
        ciphers:'SSLv3'
     },
     auth: {
-        user: 'shubro17@outlook.com',
-        pass: 'Yorb@))@'
+        user: 'yorb999@gmail.com',
+        pass: 'kqcybyqyvbyshysz'
     }
 });
 router.post('/register',async (req,res,next)=>{
