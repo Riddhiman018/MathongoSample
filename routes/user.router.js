@@ -70,6 +70,7 @@ router.post('/login',async (req,res,next)=>{
         })
         if(usr){
             req.body.ur_pwd = usr.password
+            req.body.ver_status = usr.EMAIL_VERIFIED
             next()
         }
         else{
@@ -86,7 +87,7 @@ router.post('/login',async (req,res,next)=>{
     try{
         const result = await bcrypt.compare(req.body.password,req.body.ur_pwd)
         if(result){
-            if(result.EMAIL_VERIFIED){
+            if(req.body.ver_status){
                 res.status(200).send({
                     Message:'User verified'
                 })
