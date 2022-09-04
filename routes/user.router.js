@@ -193,6 +193,7 @@ router.get('/userDetails',async (req,res)=>{
             })
         }
         else{
+            result.password = ""
             res.status(200).send(result)
         }
     })
