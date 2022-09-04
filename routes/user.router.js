@@ -17,8 +17,8 @@ const transporter = nodemailer.createTransport({
        ciphers:'SSLv3'
     },
     auth: {
-        user: 'yorb999@gmail.com',
-        pass: 'kqcybyqyvbyshysz'
+        user: '<sample>@gmail.com',
+        pass: '<sample>'
     }
 });
 router.post('/register',async (req,res,next)=>{
