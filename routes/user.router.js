@@ -185,7 +185,7 @@ router.post('/verifyOTP',async (req,res)=>{
 })
 router.get('/userDetails',async (req,res)=>{
     usrschema.findOne({
-        email_id:req.body.email_id
+        email_id:req.query.email_id
     },function(error,result){
         if(error){
             res.status(500).send({
