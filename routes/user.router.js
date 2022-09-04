@@ -133,7 +133,7 @@ router.post('/sendOtp',async (req,res)=>{
             transporter.sendMail(msg,function(error,result){
                 if(error){
                     res.status(500).send({
-                        Message:`Error message during otp sending : ${e.message}`
+                        Message:`Error message during otp sending : ${error.message}`
                     })
                 }
                 else{
